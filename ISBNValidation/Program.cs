@@ -10,7 +10,7 @@ namespace ISBNValidation
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("The input ISBN is " + args[0] + " and it is {0}", IsValid(args[0]));
+            Console.WriteLine("The input ISBN is {0} and it is {1}", args[0], IsValid(args[0]));
         }
         public static Boolean IsValid(String ISBN)
         {
@@ -41,12 +41,7 @@ namespace ISBNValidation
             }
 
             //divide sum by 11.  
-            if ((sum % 11) == 0)
-            {
-                return true;
-            }
-            else
-                return false;
+            return ((sum % 11) == 0);
         }
 
     }
